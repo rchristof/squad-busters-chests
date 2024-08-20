@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e4e274c0.css",
+    "main.js": "/static/js/main.291be949.js",
+    "static/js/453.3a1bcf8c.chunk.js": "/static/js/453.3a1bcf8c.chunk.js",
+    "static/media/Blue_bg.png": "/static/media/Blue_bg.8409f54833a912868144.png",
+    "static/media/SquadLatin-Bold.otf": "/static/media/SquadLatin-Bold.defa4c775e476b373446.otf",
+    "static/media/SquadLatin-Regular.otf": "/static/media/SquadLatin-Regular.0242deef2cba694cf67c.otf",
+    "static/media/Rare_Chest.webp": "/static/media/Rare_Chest.ec7b10b2776289f1b4b1.webp",
+    "static/media/Epic_Chest.webp": "/static/media/Epic_Chest.9b6b195be6698922c435.webp",
+    "static/media/Common_Chest.webp": "/static/media/Common_Chest.cc738c632300651c68e5.webp",
+    "index.html": "/index.html",
+    "main.e4e274c0.css.map": "/static/css/main.e4e274c0.css.map",
+    "main.291be949.js.map": "/static/js/main.291be949.js.map",
+    "453.3a1bcf8c.chunk.js.map": "/static/js/453.3a1bcf8c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4e274c0.css",
+    "static/js/main.291be949.js"
+  ]
+}
