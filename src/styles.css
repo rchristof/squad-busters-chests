@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'SquadLatin';
+  src: url('./fonts/SquadLatin-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SquadLatin';
+  src: url('./fonts/SquadLatin-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: bold;
+}
+
+body, html, #root, .App {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00eeff;
+  background-image: url('./images/Blue_bg.png'); /* Adiciona a imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir a tela mantendo a proporção */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-attachment: fixed;
+  font-family: 'SquadLatin', sans-serif;
+  font-weight: bold;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza as grids e as abas horizontalmente */
+}
+
+.tabs-wrapper {
+  width: 100%;
+  max-width: 600px; /* Limita a largura do contêiner das abas ao tamanho da grid */
+  overflow-x: auto; /* Permite rolagem horizontal se as abas excederem a largura */
+  white-space: nowrap; /* Impede que as abas quebrem para a linha de baixo */
+  scrollbar-width: thin; /* Define a largura da barra de rolagem no Firefox */
+  scrollbar-color: #ccc transparent; /* Define a cor da barra de rolagem e da trilha no Firefox */
+  box-sizing: border-box; /* Garante que o padding e a borda não ultrapassem o contêiner */
+  margin-bottom: 0; /* Remove o espaço entre as tabs e a grid */
+}
+
+.tabs-wrapper::-webkit-scrollbar {
+  height: 6px; /* Altura da scrollbar */
+}
+
+.tabs-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Cor da barra de rolagem */
+  border-radius: 10px; /* Arredonda a barra de rolagem */
+}
+
+.tabs-wrapper::-webkit-scrollbar-track {
+  background-color: transparent; /* Deixa o fundo da trilha da scrollbar transparente */
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: nowrap; /* Garante que as abas fiquem em uma linha */
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* Limita as abas ao tamanho da grid */
+  align-items: flex-start; /* Alinha as abas à esquerda */
+  border-bottom: none; /* Remove a borda inferior para conectar com a grid */
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin-right: 5px;
+  
+  border: 1px transparent solid;
+  background-color: rgba(255, 255, 255, 0.418); /* Mesma cor do contêiner da grid */
+  cursor: pointer;
+  position: relative;
+  border-bottom: none; /* Remove a borda inferior para conectar com a grid */
+  border-radius: 10px 10px 0 0;
+  flex-shrink: 0; /* Impede que as abas diminuam de tamanho */
+}
+
+.tabs button.active {
+  background-color: #bbb; /* Cor mais escura para a aba ativa */
+}
+
+.tabs button span {
+  margin-left: 10px;
+  cursor: pointer;
+  color: red;
+}
+
+.tabs input {
+  width: 100px; /* Mantém o input no mesmo tamanho da aba */
+  padding: 0px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8); /* Mesma cor das abas inativas */
+  border-radius: 10px 10px 0 0;
+}
+
+.grid, .single-row-grid {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px; /* Bordas arredondadas */
+  display: grid;
+  grid-template-columns: repeat(10, 50px); /* 10 colunas de 50px cada */
+  gap: 10px;
+  width: fit-content;
+  display: overflow;
+  flex-wrap: wrap; /* Garante que as abas fiquem em uma linha */
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  border-radius: 0 10px 10px 10px;
+}
+
+.single-row-grid {
+  margin-top: px; /* Espaçamento entre a grid principal e a grid de uma linha */
+}
+
+.grid img, .single-row-grid img {
+  width: 100%;
+  max-width: 50px; /* Limita a largura das imagens para garantir que elas se ajustem corretamente */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.grid img.clicked {
+  opacity: 0.5;
+}
+
+.grid-item {
+  position: relative; /* Necessário para posicionar o índice sobre o item */
+}
+
+.grid-item img {
+  width: 100%;
+  max-width: 50px; /* Limita a largura das imagens para garantir que elas se ajustem corretamente */
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.index-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: rgb(82, 82, 82);
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-weight: bold;
+  max-width: 8px; /* Largura mínima para manter a forma circular */
+  height: 15px; /* Altura fixa para manter a forma circular */
+  line-height: 15px; /* Centraliza verticalmente o texto dentro da bolinha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
